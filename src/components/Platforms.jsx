@@ -15,7 +15,7 @@ const Platforms = () => {
                     {PLATFORMS_DATA.map((platform) => (
                         <a
                             key={platform.id}
-                            className="sm:max-w-[56px] max-w-[70px]"
+                            className="sm:max-w-[60px] max-w-[70px]"
                             href={platform.link}
                         >
                             <img src={platform.img} alt={platform.alt} />

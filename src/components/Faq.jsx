@@ -3,18 +3,20 @@ import { ACCORDION_ITEMS } from '../common/Helper';
 import Heading from '../common/Heading';
 
 const Faq = () => {
-    const [activeIndex, setActiveIndex] = useState(0); 
+    const [activeIndex, setActiveIndex] = useState(null); // No accordion open by default
     const contentRefs = useRef([]);
 
     const toggleAccordion = (index) => {
-        setActiveIndex(activeIndex === index ? null : index);  
+        setActiveIndex(activeIndex === index ? null : index); // Toggle or close accordion
     };
 
     useEffect(() => {
-        if (contentRefs.current[activeIndex]) {
-            contentRefs.current[activeIndex].style.height = `${contentRefs.current[activeIndex]?.scrollHeight}px`;
-        }
-    }, [activeIndex]);  
+        contentRefs.current.forEach((ref, i) => {
+            if (ref) {
+                ref.style.height = activeIndex === i ? `${ref.scrollHeight}px` : '0px'; // Adjust height dynamically
+            }
+        });
+    }, [activeIndex]);
 
     return (
         <div className='bg-creamy md:pt-[70px] md:pb-[60px] max-md:py-14'>
@@ -37,7 +39,8 @@ const Faq = () => {
                                     width="20"
                                     height="20"
                                     viewBox="0 0 24 24"
-                                    className={`transform transition-transform duration-300 ${activeIndex === index ? 'rotate-0' : 'rotate-180'}`}
+                                    className={`transform transition-transform duration-300 ${activeIndex === index ? 'rotate-0' : 'rotate-180'
+                                        }`}
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
                                     {activeIndex === index ? (
@@ -52,9 +55,6 @@ const Faq = () => {
                             </button>
                             <div
                                 ref={(el) => (contentRefs.current[index] = el)}
-                                style={{
-                                    height: activeIndex === index ? `${contentRefs.current[index]?.scrollHeight}px` : '0px',
-                                }}
                                 className="overflow-hidden transition-all duration-500 ease-in-out"
                             >
                                 <div className="p-[0_16px_16px_16px] sm:pb-2 sm:px-4 sm:pt-2 text-charcoal-black font-poppins font-normal text-lg leading-6">
