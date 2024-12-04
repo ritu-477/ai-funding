@@ -9,7 +9,7 @@ const Seller = () => {
   return (
       <div className='md:py-12 pt-[51px] pb-[90px] relative'>
           <div className='container'>
-              <div className='flex lg:justify-between lg:flex-row flex-col'>
+              <div className='flex lg:justify-between lg:flex-row flex-col max-w-[1240px] mx-auto'>
                   <div className='flex flex-col justify-center max-lg:items-center'>
                       <Heading className='pt-[14px] lg:text-start text-center md:max-w-[401px] max-w-[306px]' text='Become an 8 figure seller with AI funding' />
                       <div className='mt-5'>
