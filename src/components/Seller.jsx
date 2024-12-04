@@ -19,7 +19,7 @@ const Seller = () => {
                   <div className='mt-[43px] hidden md:flex max-lg:justify-center max-lg:items-center'>
                       <img className='max-w-[440px]' src={womenImg} alt="women-image" />
                   </div>
-                  <div className='absolute left-0 bottom-[-240px]'>
+                  <div className='absolute left-0 bottom-[-240px] md:hidden block'>
                       <img className='max-w-[345px] w-full' src={mobileImg} alt="mobile-image" />
                   </div>
             </div>
