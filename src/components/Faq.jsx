@@ -57,7 +57,7 @@ const Faq = () => {
                                 ref={(el) => (contentRefs.current[index] = el)}
                                 className="overflow-hidden transition-all duration-500 ease-in-out"
                             >
-                                <div className="p-[0_16px_16px_16px] sm:pb-2 sm:px-4 sm:pt-2 text-charcoal-black font-poppins font-normal text-lg leading-6">
+                                <div className="p-[0_16px_16px_16px] sm:py-5 sm:px-4 text-charcoal-black font-poppins font-normal text-lg leading-6">
                                     {item.content}
                                 </div>
                             </div>

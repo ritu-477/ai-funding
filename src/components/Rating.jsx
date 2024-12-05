@@ -16,7 +16,7 @@ const Rating = () => {
                       <p className='md:text-custom-5xl text-white md:leading-custom-7xl text-[32px] leading-[43.93px] abril-semibold'>400%</p>
                   </div>
                   <div className='flex flex-col items-center'>
-                      <img className='max-w-[83px] pb-[10px]' src={trustImg} alt="trust-image" />
+                      <img className='max-w-[140px] pb-[10px]' src={trustImg} alt="trust-image" />
                       <p className='md:text-custom-5xl text-white md:leading-custom-7xl text-[32px] leading-[43.93px] abril-semibold'>Excellent</p>
                   </div>
                   <div className='flex flex-col items-center'>
